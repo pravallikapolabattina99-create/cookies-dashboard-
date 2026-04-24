@@ -31,6 +31,21 @@ Revenue analysis by city, state, and cookie type helps identify top-performing r
 Profit margin and average order value provide insights into business profitability and customer purchasing behavior.
 
 Dashboard Screenshot--
+Python 
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+summary = dataset.groupby('Cookie Type')[['Total Revenue','Units Sold']].sum()
+
+summary.plot(kind='bar', figsize=(8,4))
+plt.title('Total Revenue and Units Sold by Cookie Type')
+plt.xlabel('Cookie Type')
+plt.ylabel('Values')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
 
 <img width="918" height="515" alt="customer " src="https://github.com/user-attachments/assets/d8b44273-a854-48d1-ba0b-2eff3c787643" />
 
